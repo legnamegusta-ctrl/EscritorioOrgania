@@ -15,6 +15,9 @@ export default [
     }
   },
   {
+    ignores: ['public/functions/**']
+  },
+  {
     files: ['__tests__/**/*.js'],
     languageOptions: {
       globals: {

@@ -2,11 +2,11 @@ import { jest } from '@jest/globals';
 
 document.body.innerHTML = '<form id="loginForm"></form>';
 
-jest.unstable_mockModule('../js/firebase.js', () => ({
+jest.unstable_mockModule('../public/js/firebase.js', () => ({
   auth: {}
 }), { virtual: true });
 
-const { getFirebaseErrorMessage } = await import('../js/auth.js');
+const { getFirebaseErrorMessage } = await import('../public/js/auth.js');
 
 describe('getFirebaseErrorMessage', () => {
   test('maps user-not-found', () => {

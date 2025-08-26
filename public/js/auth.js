@@ -21,7 +21,7 @@ form.addEventListener('submit', async (e) => {
   const password = form.password.value;
   try {
     await signInWithEmailAndPassword(auth, email, password);
-    window.location.href = 'dashboard.html';
+    window.location.href = '../dashboard.html';
   } catch (err) {
     showToast(getFirebaseErrorMessage(err.code), 'error');
     console.error(err);
