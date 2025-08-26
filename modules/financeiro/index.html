@@ -4,38 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Financeiro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../../css/styles.css" />
 </head>
-<body>
-  <header>
-    <h1>Financeiro</h1>
+<body data-module="financeiro" class="min-h-screen flex flex-col">
+  <header class="bg-blue-800 text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl">Financeiro</h1>
     <a href="../../dashboard.html" class="button">Voltar</a>
   </header>
-  <main>
-    <nav>
-      <ul>
+  <main class="flex-1 p-4">
+    <nav class="space-y-2">
+      <ul class="list-disc list-inside space-y-2">
         <li>Caixa
-          <ul>
+          <ul class="list-disc list-inside ml-4 space-y-1">
             <li>PDV (balança/amostra/café)</li>
             <li>Clientes</li>
             <li>Movimentações</li>
           </ul>
         </li>
         <li>Análises de Solo
-          <ul>
+          <ul class="list-disc list-inside ml-4 space-y-1">
             <li>Registrar Solicitação de Análise</li>
             <li>Remessa Lote de Análises</li>
             <li>Histórico</li>
           </ul>
         </li>
         <li>Relatórios
-          <ul>
+          <ul class="list-disc list-inside ml-4 space-y-1">
             <li>Fluxo por período (Balança/Análises)</li>
             <li>Exportar CSV/PDF</li>
           </ul>
         </li>
         <li>Controle
-          <ul>
+          <ul class="list-disc list-inside ml-4 space-y-1">
             <li>Contas a Pagar/Receber</li>
             <li>Conciliação bancária</li>
             <li>Comissões de Venda</li>

@@ -4,25 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Suprimentos / Logística</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../../css/styles.css" />
 </head>
-<body>
-  <header>
-    <h1>Suprimentos / Logística</h1>
+<body data-module="suprimentos-logistica" class="min-h-screen flex flex-col">
+  <header class="bg-blue-800 text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl">Suprimentos / Logística</h1>
     <a href="../../dashboard.html" class="button">Voltar</a>
   </header>
-  <main>
-    <nav>
-      <ul>
+  <main class="flex-1 p-4">
+    <nav class="space-y-2">
+      <ul class="list-disc list-inside space-y-2">
         <li>Matéria-Prima
-          <ul>
+          <ul class="list-disc list-inside ml-4 space-y-1">
             <li>Cotações</li>
             <li>Histórico de preços por fornecedor</li>
             <li>Ordens de Compra</li>
           </ul>
         </li>
         <li>Frete Fornecedor
-          <ul>
+          <ul class="list-disc list-inside ml-4 space-y-1">
             <li>Cotação de Frete</li>
             <li>Histórico de Cotação</li>
             <li>Fretes</li>

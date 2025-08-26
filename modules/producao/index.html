@@ -4,29 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Produção</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../../css/styles.css" />
 </head>
-<body>
-  <header>
-    <h1>Produção</h1>
+<body data-module="producao" class="min-h-screen flex flex-col">
+  <header class="bg-blue-800 text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl">Produção</h1>
     <a href="../../dashboard.html" class="button">Voltar</a>
   </header>
-  <main>
-    <nav>
-      <ul>
+  <main class="flex-1 p-4">
+    <nav class="space-y-2">
+      <ul class="list-disc list-inside space-y-2">
         <li>Ordens de Produção
-          <ul>
+          <ul class="list-disc list-inside ml-4 space-y-1">
             <li>Gerar ordem de produção</li>
             <li>Registros de OP</li>
           </ul>
         </li>
         <li>Estoque
-          <ul>
+          <ul class="list-disc list-inside ml-4 space-y-1">
             <li>Consumo de Matéria-Prima (baixa simples por OP)</li>
           </ul>
         </li>
         <li>Controle de lote
-          <ul>
+          <ul class="list-disc list-inside ml-4 space-y-1">
             <li>Rastreabilidade de lote</li>
             <li>Controle de Amostra</li>
             <li>Laudos internos</li>

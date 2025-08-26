@@ -4,18 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
-  <header>
-    <h1>Fábrica de Fertilizantes</h1>
+<body class="min-h-screen flex flex-col items-center justify-center bg-gray-100">
+  <header class="mb-4">
+    <h1 class="text-2xl font-bold">Fábrica de Fertilizantes</h1>
   </header>
-  <main>
-    <form id="loginForm">
-      <input type="email" name="email" placeholder="Email" required />
-      <input type="password" name="password" placeholder="Senha" required />
-      <button class="button" type="submit">Entrar</button>
-      <div id="error" style="color:red;margin-top:1em;"></div>
+  <main class="w-full max-w-sm">
+    <form id="loginForm" class="flex flex-col gap-4">
+      <input class="border p-2" type="email" name="email" placeholder="Email" required />
+      <input class="border p-2" type="password" name="password" placeholder="Senha" required />
+      <button class="button w-full" type="submit">Entrar</button>
+      <div id="error" class="text-red-500 mt-2"></div>
     </form>
   </main>
   <script type="module" src="js/auth.js"></script>
