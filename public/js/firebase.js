@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+import { getFirestore, connectFirestoreEmulator } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
 
 // TODO: replace with your Firebase project configuration
 const firebaseConfig = {
@@ -15,3 +15,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+
+if (typeof window !== "undefined" && window.location.hostname === "localhost") {
+  connectFirestoreEmulator(db, "localhost", 8080);
+}
