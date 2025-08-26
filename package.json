@@ -1,0 +1,16 @@
+{
+  "name": "123444",
+  "version": "1.0.0",
+  "description": "Aplicativo web simples em HTML, CSS e JavaScript organizado por módulos.",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.34.0",
+    "eslint": "^9.34.0",
+    "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5"
+  }
+}

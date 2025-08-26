@@ -4,28 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Painel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
-  <header>
-    <h1>Painel Principal</h1>
+<body class="min-h-screen flex flex-col">
+  <header class="bg-blue-800 text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl">Painel Principal</h1>
     <button id="logout" class="button">Sair</button>
   </header>
-  <main>
-    <nav>
-      <ul>
-        <li><a href="modules/financeiro/index.html">Financeiro</a></li>
-        <li><a href="modules/suprimentos-logistica/index.html">Suprimentos / Logística</a></li>
-        <li><a href="modules/comercial/index.html">Comercial</a></li>
-        <li><a href="modules/producao/index.html">Produção</a></li>
-        <li><a href="modules/agronomico/index.html">Agronômico</a></li>
-        <li><a href="modules/escritorio/index.html">Escritório</a></li>
-        <li><a href="modules/fazenda/index.html">Fazenda</a></li>
-        <li><a href="modules/rh/index.html">RH</a></li>
-        <li><a href="modules/cadastros/index.html">Cadastros</a></li>
-        <li><a href="modules/admin/index.html">Admin</a></li>
-      </ul>
-    </nav>
+  <main class="flex-1 p-4">
+    <nav id="modules-nav"></nav>
   </main>
   <script type="module" src="js/check-auth.js"></script>
 </body>

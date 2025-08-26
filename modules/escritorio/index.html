@@ -4,19 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Escritório</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../../css/styles.css" />
 </head>
-<body>
-  <header>
-    <h1>Escritório</h1>
+<body data-module="escritorio" class="min-h-screen flex flex-col">
+  <header class="bg-blue-800 text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl">Escritório</h1>
     <a href="../../dashboard.html" class="button">Voltar</a>
   </header>
-  <main>
-    <nav>
-      <ul>
+  <main class="flex-1 p-4">
+    <nav class="space-y-2">
+      <ul class="list-disc list-inside space-y-2">
         <li>Compras</li>
         <li>Segurança do Trabalho
-          <ul>
+          <ul class="list-disc list-inside ml-4 space-y-1">
             <li>EPI</li>
             <li>Documentação</li>
           </ul>

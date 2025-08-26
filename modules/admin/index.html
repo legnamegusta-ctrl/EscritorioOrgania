@@ -4,25 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../../css/styles.css" />
 </head>
-<body>
-  <header>
-    <h1>Admin</h1>
+<body data-module="admin" class="min-h-screen flex flex-col">
+  <header class="bg-blue-800 text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl">Admin</h1>
     <a href="../../dashboard.html" class="button">Voltar</a>
   </header>
-  <main>
-    <nav>
-      <ul>
+  <main class="flex-1 p-4">
+    <nav class="space-y-2">
+      <ul class="list-disc list-inside space-y-2">
         <li>Usuários & Permissões (RBAC)</li>
         <li>Parâmetros do Sistema
-          <ul>
+          <ul class="list-disc list-inside ml-4 space-y-1">
             <li>Preço pesagem (R$40/R$60), valor da amostra (R$50)</li>
             <li>Rodapé de recibos (“Não é documento fiscal”)</li>
           </ul>
         </li>
         <li>Sequenciadores de Amostra
-          <ul>
+          <ul class="list-disc list-inside ml-4 space-y-1">
             <li>Próximo código AS####</li>
           </ul>
         </li>

@@ -1,8 +1,19 @@
 import { auth } from './firebase.js';
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+import { showToast } from './toast.js';
+
+export function getFirebaseErrorMessage(code) {
+  switch (code) {
+    case 'auth/user-not-found':
+      return 'Usuário não encontrado';
+    case 'auth/wrong-password':
+      return 'Senha inválida';
+    default:
+      return 'Erro ao fazer login';
+  }
+}
 
 const form = document.getElementById('loginForm');
-const errorBox = document.getElementById('error');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -12,7 +23,7 @@ form.addEventListener('submit', async (e) => {
     await signInWithEmailAndPassword(auth, email, password);
     window.location.href = 'dashboard.html';
   } catch (err) {
-    errorBox.textContent = 'Login failed';
+    showToast(getFirebaseErrorMessage(err.code), 'error');
     console.error(err);
   }
 });

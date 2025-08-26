@@ -4,25 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Comercial</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../../css/styles.css" />
 </head>
-<body>
-  <header>
-    <h1>Comercial</h1>
+<body data-module="comercial" class="min-h-screen flex flex-col">
+  <header class="bg-blue-800 text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl">Comercial</h1>
     <a href="../../dashboard.html" class="button">Voltar</a>
   </header>
-  <main>
-    <nav>
-      <ul>
+  <main class="flex-1 p-4">
+    <nav class="space-y-2">
+      <ul class="list-disc list-inside space-y-2">
         <li>Propostas/Orçamentos de venda</li>
         <li>Pedidos
-          <ul>
+          <ul class="list-disc list-inside ml-4 space-y-1">
             <li>Novos pedidos</li>
             <li>Histórico de pedidos</li>
           </ul>
         </li>
         <li>Tabela
-          <ul>
+          <ul class="list-disc list-inside ml-4 space-y-1">
             <li>Tabela Atual</li>
             <li>Tabela Completa</li>
             <li>Histórico de Preços</li>
