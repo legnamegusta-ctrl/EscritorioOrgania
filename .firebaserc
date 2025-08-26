@@ -1,5 +1,7 @@
 {
   "projects": {
     "default": "organiaescritorio"
-  }
+  },
+  "targets": {},
+  "etags": {}
 }
