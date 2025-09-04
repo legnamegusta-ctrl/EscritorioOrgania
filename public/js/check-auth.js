@@ -3,6 +3,8 @@ import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/
 import { doc, getDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
 import { showToast } from './toast.js';
 
+const IS_LOCAL = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+
 const MODULES = [
   { id: 'financeiro', label: 'Financeiro', url: 'modules/financeiro/index.html' },
   { id: 'suprimentos-logistica', label: 'Suprimentos / Logística', url: 'modules/suprimentos-logistica/index.html' },
@@ -62,6 +64,13 @@ function renderDashboard(role) {
 
 onAuthStateChanged(auth, async (user) => {
   if (!user) {
+    if (IS_LOCAL) {
+      const moduleId = document.body.dataset.module;
+      if (!moduleId) {
+        renderDashboard('admin');
+      }
+      return;
+    }
     window.location.href = 'index.html';
     return;
   }
