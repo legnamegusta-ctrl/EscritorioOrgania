@@ -32,7 +32,9 @@ const ROLE_PERMISSIONS = {
 async function getUserRole(uid) {
   try {
     const snap = await getDoc(doc(db, 'users', uid));
-    return snap.exists() ? snap.data().role : null;
+    if (!snap.exists()) return null;
+    const role = snap.data().role;
+    return typeof role === 'string' ? role.toLowerCase() : null;
   } catch {
     showToast('Erro ao carregar permissões', 'error');
     return null;
