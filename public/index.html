@@ -6,6 +6,11 @@
   <title>Login</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css" />
+  <script>
+    if (['localhost', '127.0.0.1'].includes(window.location.hostname)) {
+      window.location.href = 'dashboard.html';
+    }
+  </script>
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center bg-gray-100">
   <header class="mb-4">
